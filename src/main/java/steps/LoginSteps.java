@@ -1,6 +1,7 @@
 package steps;
 
 import config.Config;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,7 +9,6 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import models.login.LoginRequest;
 import models.login.LoginResponse;
-import org.junit.jupiter.api.BeforeAll;
 
 import java.io.IOException;
 
@@ -20,7 +20,7 @@ public class LoginSteps extends Config {
     private LoginRequest loginRequest;
     private Response response;
 
-    @BeforeAll
+    @Before
     public static void setup() throws IOException {
         Config.setup();
     }

@@ -1,7 +1,7 @@
 package steps;
 
 import config.Config;
-import io.cucumber.java.BeforeAll;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -20,7 +20,7 @@ public class UserSteps {
     private UserRequest userRequest;
     private Response response;
 
-    @BeforeAll
+    @Before
     public static void setup() throws IOException {
         Config.setup();
     }
